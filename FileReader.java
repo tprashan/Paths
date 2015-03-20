@@ -8,12 +8,12 @@ import java.util.*;
 
 
 public class FileReader {
-    public Map<String,List<String>> createDataBaseFromFileInput(String fileName){
+    public static Map<String,List<String>> createDataBaseFromFileInput(String fileName){
         Map<String,List<String>> cityDB = new HashMap<String,List<String>>();
         File inFile = new File(fileName);
         try{
-            FileInputStream fstream = new FileInputStream(inFile);
-            BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+            FileInputStream fileStream = new FileInputStream(inFile);
+            BufferedReader br = new BufferedReader(new InputStreamReader(fileStream));
             String strLine=br.readLine();
             while ( strLine != null)   {
                 String[] cities = strLine.split(",");

@@ -11,7 +11,7 @@ public class Main {
         int length = args.length;
         try{
             SearchRoutes searchRoutes = new SearchRoutes();
-            Boolean path = searchRoutes.findRoutes(args[0], args[1]);
+            Boolean path = searchRoutes.findRoutes(args[0], args[1],args[2]);
             System.out.println(path);
         }catch(Exception e){
             System.out.println(e.getMessage());
